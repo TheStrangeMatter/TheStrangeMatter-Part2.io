@@ -159,6 +159,29 @@ done
 лев кат || OY
 прямой угол смотрит в лев верхний
 
+import turtle as t
+
+
+k=10
+
+t.left(90)
+for i in range(3):
+    t.right(45)
+    t.forward(15 * (2** 0.5) * 10)
+    t.right(180-45)
+    t.forward(15*k)
+    t.right(90)
+    t.forward(15 * 10)
+    t.right(90)
+
+t.pu()
+for x in range(1,14):
+    for y in range(1,15):
+        t.goto(x*10,y*10)
+        t.dot(5)
+t.done()
+
+
 ```
 #8(2)
 from itertools import product
