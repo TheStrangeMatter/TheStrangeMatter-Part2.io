@@ -103,7 +103,7 @@
 | 99 | |
 | 100 | |
 
-
+```python
 ### 1
 
 ### 2
@@ -125,7 +125,7 @@ x y z w
 
 
 ### 5
-```
+
 for i in range(1,100):
     chislo=''
     num=(bin(i)[2:])
@@ -137,9 +137,9 @@ for i in range(1,100):
     if int(chislo,2)>40:
         print (i, int(chislo,2))
         break
-```
 
-```
+
+
 for N in range(516):
   b = f'{N:b}'
     if N% 2 == 0:
@@ -149,7 +149,7 @@ for N in range(516):
     if int(b, 2) > 516:
       print(N)
       break
-```
+
 
 
 Организовать перебор чисел.
@@ -160,7 +160,7 @@ for N in range(516):
 
 Найти минимальное число, которое после перевода в двоичную форму преобразовывается по правилу: 
 
-```
+
 #6
 from turtle import *
 left(90)
@@ -173,7 +173,7 @@ for x in range(1,9):
         goto(x*30,y*30)
         dot(5)
 done()
-```
+
 
 Вспомнить команды черепашки
 forward()
@@ -214,7 +214,7 @@ for x in range(1,14):
 t.done()
 
 
-```
+
 ### 8(2)
 from itertools import product
 nums=product('01234567',repeat=5)
@@ -231,7 +231,7 @@ for n in nums:
         if not sp: 
             k+=1
 print(k)
-```
+
 
 Написать все возможные варианты последовательности
 Проверить варианты по условиям задачи
@@ -274,7 +274,7 @@ while True:
    y=x+6
    
 ### 11   
-```
+
 for x in range(10000):
     s = x
     s = (s - 10) // 7
@@ -287,10 +287,10 @@ for x in range(10000):
         break
 
 ### 12
-```
+
 spisok=[]
 for num in range(2,1000):
-  n=0
+  n=0 
   for delit in range (2,100):
     if num%delit==0 and x<i: n+=1
   
@@ -302,10 +302,10 @@ for i in spisok:
         if y*4+117==i and flag==False:
             print(y, i)
             flag=True
-```
+
 
 ### 14
-```
+
 for x in range(15):
     a15=1*15**4+2*15**3+3*15**2+x*15**1+5
     b15=1*15**4+x*15**3+2*15**2+3*15+3
@@ -313,10 +313,10 @@ for x in range(15):
     if sum10%14==0:
         print(x , sum10//14)
         break
-```
+
 
 ### 15 
-```
+
 for A in range(100):
     if all(((x % 3 == 0) <= (x % 5 != 0)) or x + A >= 70 for x in range(1, 10000)):
         print(A)
