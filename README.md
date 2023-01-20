@@ -321,6 +321,74 @@ for A in range(100):
     if all(((x % 3 == 0) <= (x % 5 != 0)) or x + A >= 70 for x in range(1, 10000)):
         print(A)
         break
-```
 
 ### 16
+
+itog1=itog2=1
+for x1 in range(1,2024):
+    itog1=itog1*x1
+for x2 in range(1,2021):
+    itog2=itog2*x2
+print(itog1/itog2)
+
+### 17
+
+with open('17.txt') as f:
+    n = [int(x) for x in f]
+
+mn = min(x for x in n if x % 17 == 0)
+sums = []
+for a, b in zip(n, n[1:]):
+    if a % mn == 0 or b ^ mn == 0:
+        sums.append(a+b)
+print(len(sums), max(sums))
+
+### 18
+
+### 19
+from functools import lru_cache
+
+@lru_cache(None)
+def g(a, b):
+    if a + b >= 223:
+        return 0
+    ms = [(a * 2, b), (a, b * 2), (a + 1, b), (a, b + 1)]
+    if any(g(x, y) == 0 for x, y in ms):
+        return 1
+    if all(g(x, y) == 1 for x, y in ms):
+        return 2
+    if any(g(x, y) == 2 for x, y in ms):
+        return 3
+    if all(g(x, y) in (1, 3) for x, y in ms):
+        return 4
+
+for x in range(1, 205):
+    if g(17, x) == 3:
+        print(3, x)
+
+for x in range(1, 205):
+    if g(17, x) == 4:
+        print(4, x)
+        
+### 22
+for x in range(10000):
+    s = x
+    P = 10
+    Q = 8
+    K1 = 0
+    K2 = 0
+    while s <= 100:
+        s = s + P
+        K1 = K1 + 1
+
+    while s >= Q:
+        s = s - Q
+        K2 = K2 + 1
+
+    K1 += s
+    K2 += s
+    if K1 == 10 and K2 == 19:
+        print(x)
+        break
+
+```
